@@ -1,0 +1,247 @@
+\documentclass[8pt,a4paper]{moderncv}
+\usepackage[utf8]{inputenc}
+% \usepackage[top=0.5in, left=0.5in, right=0.5in, bottom=1.0in]{geometry}
+\usepackage[top=0.3in, left=0.4in, right=0.4in, bottom=0.9in]{geometry}
+\moderncvtheme[black]{casual}
+\usepackage{lmodern}
+\usepackage[english,ngerman]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{relsize}
+\usepackage{enumitem}
+\setlength{\hintscolumnwidth}{4.25cm}
+
+\usepackage{ifthen}
+\def\localedef#1#2{
+  \ifthenelse{\equal{\locale}{#1}}{
+    \selectlanguage{#2}
+    \expandafter\def\csname#1\endcsname ##1{##1}
+  }{
+    \expandafter\def\csname#1\endcsname ##1{}
+  }
+}
+
+\localedef{en}{english}
+\localedef{de}{ngerman}
+
+\firstname{Braden}
+\familyname{Walters}
+\title{\en{R\'{e}sum\'{e} / Curriculum Vitae}\ignorespaces
+       \de{Resum\'e / Lebenslauf}}
+\address{Landsberger Str. 10}{01187 Dresden, \en{Germany}\de{Deutschland}}
+\mobile{+1 330 984 6703}
+\email{cv@braden-walters.info}
+\photo[3cm]{images/DSCN1157}
+
+\renewcommand*\namefont{\fontsize{40}{48}\selectfont}
+\renewcommand*\titlefont{\fontsize{20}{24}\selectfont}
+\renewcommand*\addressfont{\selectfont}
+\renewcommand*\sectionfont{\fontsize{20}{24}\selectfont}
+\renewcommand*\subsectionfont{\fontsize{14}{100}\selectfont}
+
+\begin{document}
+  \relscale{0.95}
+
+  \maketitle
+  \section{\textbf{\en{Personal Information}\de{Pers\"onliche Angaben}}}
+  \cventry{\en{Nationality}\de{Staatsangeh\"origkeit}}
+          {\en{US American}\de{US-Amerikanisch}}{}{}{}{}
+  \cventry{\en{Born}\de{Geburt}}
+          {\en{23 February 1993}\de{23. Februar 1993}}
+          {Youngstown, Ohio}{}{}{}
+  \de{\cventry{Familienstand}{ledig}{}{}{}{}}
+
+  \section{\textbf{\en{Education}\de{Ausbildung}}}
+  \subsection{\en{Academic Education and Professional Development}\ignorespaces
+              \de{Akademische Ausbildung und beruflicher Werdegang}}
+  \cventry{\en{Aug 2011 - current}\de{Aug 2011 - heute}}
+          {Youngstown State University\de{ (Universit\"at)}}
+          {Youngstown, Ohio}{}{}{}{}
+  \begin{itemize}[leftmargin=51mm, noitemsep, topsep=0pt]
+    \item \en{B.S Computer Science}\de{B.Sc. Informatik}
+    \item \en{Minor: Mathematics}\de{Nebenfach: Mathematik}
+    \item \en{Expected Graduation Date: May 2015}\ignorespaces
+          \de{Erwartetes Abschlussdatum: Mai 2015}
+  \end{itemize}
+  \cventry{}{\en{GPA}\de{Durchschnittsnote}}
+            {\en{3.68 on a 4.0 scale}\de{3,68 in der 4,0-Skala}}{}{}{}
+  \cventry{Jun 2013 -- Aug 2013}{The Learning Egg, LLC}
+          {\en{Internship as Software Developer using Ruby on
+               Rails}\ignorespaces
+           \de{Praktikum als Softwareentwickler mit Ruby on Rails}}{}{}{
+      \begin{itemize}
+        \item \en{Internship through NOCHE and PICAM}\ignorespaces
+              \de{Praktikum durch NOCHE und PICAM}
+      \end{itemize}
+    }{}
+
+  \vspace{1mm}
+  \subsection{\en{Secondary School}\de{Schule}}
+  \cventry{Aug 2007 - Jun 2011}{\en{High School}\de{Oberschule}}
+          {McDonald High School}{McDonald, Ohio}{}{}
+
+  \vspace{1mm}
+  \subsection{\en{Language Skills}\de{Sprachkenntnisse}}
+  \cvlanguage{\en{English}\de{Englisch}}
+             {\en{Native Language}\de{Muttersprache}}{}
+  \cvlanguage{\en{German}\de{Deutsch}}
+             {\en{Advanced Knowledge (self-estimated C1)}\ignorespaces
+              \de{Fortgeschrittene Kenntnis (C1 selbsteingesch\"atzt)}}
+             {\en{Self-taught since Dec. 2010}\de{Selbstgelernt seit Dez. 2010}}
+  \begin{itemize}[leftmargin=51mm, rightmargin=55mm, noitemsep, topsep=0pt]
+    \item \en{TestDaF Exam Level 5 in Reading Comprehension, Listening
+              Comprehension, and Verbal Expression}\ignorespaces
+          \de{TestDaF Niveau 5 in Leseverstehen, H\"orverstehen und
+              m\"undlichem Ausdruck}
+    \item \en{TestDaF Exam Level 4 in Written Expression}\ignorespaces
+          \de{TestDaF Niveau 4 in schriftlichem Ausdruck}
+  \end{itemize}
+  \cvlanguage{\en{Swedish}\de{Schwedisch}}
+             {\en{Basic Knowledge (self-estimated A1)}\ignorespaces
+              \de{Grundlegende Kenntnis (A1 selbsteingesch\"atzt)}}
+             {\en{Self-taught since Aug. 2011}\de{Selbstgelernt seit Aug. 2011}}
+
+  \section{\textbf{\en{Qualifications}\de{Qualifikationen}}}
+  \subsection{\en{Software Development}\de{Softwareentwicklung}}
+  \cventry{\en{Operating Systems}\de{Betriebssysteme}}{GNU/Linux}{}{}{}{}
+  \cventry{\en{Programming Languages}\de{Programmiersprachen}}
+          {C, C++, Python, Java, JavaScript, PHP, Ruby, CoffeeScript, C\#,
+           \linebreak Clojure, Haskell}{}{}{}{}
+  \cventry{\en{Software Concepts}\de{Softwarekonzepte}}
+          {\en{Game AI, Compiler Design}\ignorespaces
+           \de{Spiel-KI, Compilerbau}}{}{}{}{}
+  \cventry{\en{Mathematics}\de{Mathematik}}
+          {\en{Calculus, Matrix Theory, Group Theory}\ignorespaces
+           \de{Integralrechnung, Matrixtheorie, Gruppentheorie}}{}{}{}{}
+  \cventry{\en{General Tools}\de{Allgemeine Tools}}{Git, PostgreSQL}{}{}{}{}
+  \cventry{\en{Tools for Web Development}\de{Tools f\"ur Webentwicklung}}
+          {Ruby on Rails, Django, Yii Framework, jQuery, Microsoft MVC, TinyMCE}
+          {}{}{}{}
+  \cventry{\en{Tools for Mobile Development}\de{Tools f\"ur Mobileentwicklung}}
+          {Android SDK/API}{}{}{}{}
+  \cventry{\en{Tools for Graphics Software}\de{Tools f\"ur Grafiksoftware}}
+          {OpenGL 2.1}{}{}{}{}
+
+  \newpage
+
+  \section{\textbf{\en{Work Experience}\de{Arbeitserfahrungen}}}
+  \subsection{\en{Web Development}\de{Webentwicklung}}
+  \cventry{\en{Jun 2015 - current}\de{Jun 2015 - heute}}{Unister Travel GmbH.}
+          {\en{Backend web software and automation for flight portals in PHP}
+           \ignorespaces
+           \de{Backend Websofware und Automation f\"ur Flugportale auf PHP}}{}{}
+          {}
+  \cventry{\en{Sep 2013 - Feb 2015}\de{Sep 2013 - Feb 2015}}
+          {Brilex Industries, Inc.}
+          {\en{Web software for internal usage in C\# with Microsoft
+               MVC}\ignorespaces
+           \de{Websoftware f\"ur internen Gebrauch auf C\# mit Microsoft MVC}}
+          {}{}{}
+  \cventry{Nov 2011 - Sep 2014}{Learning Egg, LLC.}
+          {\en{Development of the Lightning Grader in Yii/PHP and later Ruby on
+               Rails}\ignorespaces
+           \de{Entwicklung des Lightning Grader auf Yii/PHP und sp\"ater Ruby on
+               Rails}}{}{}{}
+  \cventry{\en{Oct 2011 - Mar 2013}\de{Okt 2011 - M\"ar 2013}}
+          {\en{YSU Biology Department}\de{YSU Biologie-Abteilung}}
+          {\en{Development of the Plant Alternative Splice Database in
+               PHP}\ignorespaces
+           \de{Entwicklung der Plant Alternative Splice Database auf PHP}}{}{}{}
+
+  \section{\textbf{\en{Research Publications}\ignorespaces
+                   \de{Publikationen in der Forschung}}}
+  \subsection{\en{Computer Science}\de{Informatik}}
+  \cventry{2014}{Walters, B., Shaffer, T., Sharif, B., and Kagdi, H.}
+          {Capturing Software Traceability Links from Developers Eye Gazes}
+          {\en{International Conference on Program Comprehension (ICPC'14), ERA
+               track, Hyderabad, India, June 2 – June 3 2014, pp.
+               201-204.}\ignorespaces
+           \de{Internationale Konferenz zu Programmverst\"andnis (ICPC’14),
+               ERA-Themenbereich, Hyderabad, Indien, 2 Juni - 3 Juni 2014,
+               S. 201-204}}{}{}
+  \cventry{2013}{Walters, B., Falcone, M., Shibble, A., Sharif. B.}
+          {Towards an Eye-tracking Enabled IDE for Software Traceability Tasks}
+          {\en{7th International Workshop on Traceability in Emerging Forms of
+               Software Engineering (TEFSE 2013). San Francisco, CA, 19 May
+               2013. pp 51-54.}\ignorespaces
+           \de{7ter internationaler Workshop zu Traceability in aufkommenden
+               Formen der Softwaretechnik (TEFSE 2013). San Francisco, CA, 19
+               Mai 2013. S. 51-54}}{}{}
+  \vspace{1mm}
+  \subsection{\en{Bioinformatics}\de{Bioinformatik}}
+  \cventry{2013}{Walters, B., Lum, G., Sablok, G., Min, XJ.}
+          {Genome-wide landscape of alternative splicing events in Brachypodium
+           distachyon}
+          {\en{DNA Res. Volume 20 Issue 2. pp 163-171.}\ignorespaces
+           \de{DNS Forschung. Buch 20 Nummer 2. S. 163-171}}{}{}
+
+  \section{\textbf{\en{Free and Open Source Software Projects}\ignorespaces
+                   \de{Freie und Quelloffene Softwareprojekte}}}
+  \cventry{\en{GitHub Profile}\de{GitHub-Profil}}
+          {https://github.com/meoblast001}{}{}{}{}
+  \cventry{\en{Oct 2014 - current}\de{Okt 2014 - heute}}{3DMeshFileKit}
+          {\en{Haskell library for reading various file formats containing 3D
+               polygon mesh}\ignorespaces
+           \de{Haskell-Softwarebibliothek, die verschiedene Dateiformate liest,
+               die 3D-Polygonnetz beinhalten}}{}{}{}
+  \cventry{\en{Nov 2013 - current}\de{Nov 2013 - heute}}{Thugaim}
+          {\en{2D video game for Android in Java}\ignorespaces
+           \de{2D-Videospiel f\"ur Android in Java}}{}{}{}
+  \cventry{\en{Aug 2011 - current}\de{Aug 2011 - heute}}{KKSystem}
+          {\en{Digital flash card system originally on Django in Python and now
+               in Ruby on Rails}\ignorespaces
+           \de{Digitales Flashkartensystem urspr\"unglich auf Django in Python
+               aber jetzt in Ruby on Rails}}{}{}{}
+
+  \section{\textbf{\en{Achievements and Other Experience}\ignorespaces
+                   \de{Leistungen und andere Erfahrungen}}}
+  \subsection{\en{Study Abroad}\de{Auslandsstudium}}
+  \cventry{Jan 2014 - Apr 2014}
+          {\en{Studied in L\"uneburg, Germany through USAC}\ignorespaces
+           \de{Studierte in L\"uneburg, Deutschland durch USAC}}
+          {}{}{}{}
+  \cventry{Nov 2013}{\en{Benjamin A. Gilman International
+                         Scholarship}\ignorespaces
+                     \de{Benjamin A. Gilman internationales Stipendium}}
+          {\en{Awarded to study abroad in Spring 2014}\ignorespaces
+           \de{Wurde f\"ur das Auslandsstudium in Fr\"uhling 2014 verliehen}}
+          {}{}{}
+  \vspace{1mm}
+  \subsection{\en{Computer Science}\de{Informatik}}
+  \cventry{\en{Dec 2012 - Dec 2014}\de{Dez 2012 - Dez 2014}}
+          {\en{Eclipse Plugin iTrace}\de{Eclipse-Plugin iTrace}}
+          {\en{Development of the plugin for traceability with eye trackers in
+               the YSU SERESL lab}\ignorespaces
+           \de{Entwicklung des Plugins f\"ur Traceability mit Eyetrackern im
+               YSU-SERESL-Labor}}{}{}{}
+  \cventry{\en{Jan 2012 - May 2013}\de{Jan 2012 - Mai 2013}}
+          {\en{President of the Student Chapter of the ACM at YSU}\ignorespaces
+           \de{Pr\"asident der Studentenortgruppe der ACM der YSU}}{}{}{}{}
+  \cventry{Nov 2011, 2012, 2013}
+          {\en{ACM International Collegiate Programming Competition
+               (ICPC)}\ignorespaces
+           \de{ACM Internationaler akedemischer Programmierungs-Wettbewerb
+               (ICPC)}}
+          {\en{Competed in competition}\de{Bei dem Wettbewerb angetreten}}
+          {}{}{}
+  \vspace{1mm}
+  \subsection{\en{Academic Achievements}\de{Akedemische Leistungen}}
+  \cventry{\en{Autumn}\de{Herbst} 2011, 2012,\\
+           \en{Spring}\de{Fr\"uhling} 2013}
+          {\en{Dean's List for Good Marks/Grades}\ignorespaces
+           \de{In die Dean's List wegen guter Noten eingeschrieben}}{}{}{}{}
+
+  \section{\textbf{\en{Presentations}\de{Pr\"asentationen}}}
+  \cventry{\en{11 February 2015}\de{11. Februar 2015}}
+          {An Introduction to Higher Order Functions}
+          {YSU Association for Computing Machinery}{}{}{}
+  \cventry{\en{3 November 2014}\de{3. November 2014}}
+          {International Studies and Study Abroad}
+          {\en{Presented four times in government and politics classes at
+               McDonald High School}\ignorespaces
+           \de{Viermal in Politikunterrichten an der Oberschule McDonald High
+               School vorgetragen}}{}{}{}
+  \cventry{\en{19 May 2013}\de{19. Mai 2013}}
+          {Towards an Eye-Tracking Enabled IDE for Software Traceability Tasks}
+          {TEFSE 2013}{}{}{}
+\end{document}
