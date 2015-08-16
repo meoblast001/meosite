@@ -38,6 +38,7 @@ title: Places I've Been
     <location longitude="10.5594" latitude="52.9652" name="Uelzen" />
     <location longitude="10.5125" latitude="52.2650" name="Braunschweig" />
     <home longitude="13.7406" latitude="51.0509" name="Dresden" />
+    <location longitude="12.38154" latitude="51.33865" name="Leipzig" />
     <location longitude="9.1952" latitude="48.7941" name="Stuttgart" />
   </locations>
 </script>
