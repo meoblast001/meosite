@@ -1,0 +1,6 @@
+module Configuration (config) where
+
+import Hakyll.Core.Configuration
+
+config :: Configuration
+config = defaultConfiguration

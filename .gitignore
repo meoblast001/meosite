@@ -4,3 +4,4 @@ cabal.sandbox.config
 _cache/*
 _site/*
 *.log
+Configuration.hs

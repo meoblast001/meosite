@@ -1,5 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+module Main where
+
+import Configuration
 import Data.Functor
 import Data.Monoid (mempty, mappend)
 import Hakyll
@@ -49,7 +52,7 @@ xelatex item = do
   makeItem $ TmpFile pdfPath
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
   match "images/*" $ do
     route idRoute
     compile copyFileCompiler
