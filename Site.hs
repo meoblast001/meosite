@@ -6,6 +6,7 @@ import Configuration
 import Data.Functor
 import Data.Monoid (mempty, mappend)
 import Hakyll
+import Hakyll.Web.Sass
 import System.FilePath
 import System.Process (system)
 import Text.Regex (mkRegex, subRegex)
@@ -61,9 +62,14 @@ main = hakyllWith config $ do
     route idRoute
     compile copyFileCompiler
 
-  match "css/*" $ do
+  match "css/*.css" $ do
     route idRoute
     compile compressCssCompiler
+
+  match "css/*.sass" $ do
+    route $ setExtension "css"
+    let compressCssItem = fmap compressCss
+    compile (compressCssItem <$> sassCompiler)
 
   match "templates/*" $ compile templateCompiler
 
