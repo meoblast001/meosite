@@ -40,6 +40,7 @@ title: Places I've Been
     <home longitude="13.7406" latitude="51.0509" name="Dresden" />
     <location longitude="12.38154" latitude="51.33865" name="Leipzig" />
     <location longitude="9.1952" latitude="48.7941" name="Stuttgart" />
+    <location longitude="7.4674" latitude="51.5134" name="Dortmund" />
   </locations>
 </script>
 
