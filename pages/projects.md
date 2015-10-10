@@ -15,8 +15,8 @@ developed for an AI course I took as a student. I decided I like the project and
 have continued development on it. Development on this project is ongoing and has
 not yet reached a stable release.
 
-#### 3DMeshFileKit
-3DMeshFileKit is a Haskell library aiming to provide importers and exporters for
-common mesh and scene formats for 3D graphics. This tool is primarily intended
-for Haskell 3D games and graphics software. This library is not yet stable but
-  will be available on [Hackage](https://hackage.haskell.org/) when it is.
+#### Hakyll SASS
+Hakyll SASS is a library for the Haskell static website generator
+[Hakyll](http://jaspervdj.be/hakyll/) used to compile
+[SASS](http://sass-lang.com/) stylesheets. The package can be found on the
+[Hakyll SASS Hackage page](https://hackage.haskell.org/package/hakyll-sass)
