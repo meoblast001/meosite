@@ -9,7 +9,7 @@ import Data.Monoid (mempty, mappend)
 import Hakyll
 import Hakyll.Web.Sass
 import System.FilePath
-import System.Process (system)
+import System.Process
 import Text.Regex (mkRegex, subRegex)
 
 toIndex :: String -> Identifier -> FilePath
@@ -53,6 +53,12 @@ xelatex item = do
     return ()
   makeItem $ TmpFile pdfPath
 
+coffeeScriptCompiler :: Compiler (Item String)
+coffeeScriptCompiler = do
+  input <- itemBody <$> getResourceBody
+  output <- unsafeCompiler $ readCreateProcess (proc "coffee" ["-cs"]) input
+  makeItem output
+
 main :: IO ()
 main = hakyllWith config $ do
   match "images/*" $ do
@@ -71,6 +77,10 @@ main = hakyllWith config $ do
     route $ setExtension "css"
     let compressCssItem = fmap compressCss
     compile (compressCssItem <$> sassCompiler)
+
+  match "js/*.coffee" $ do
+    route $ setExtension "js"
+    compile coffeeScriptCompiler
 
   match "templates/*" $ compile templateCompiler
 
