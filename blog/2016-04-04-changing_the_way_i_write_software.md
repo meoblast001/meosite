@@ -19,7 +19,7 @@ promotes quite a bit of functional and declarative programming. That is:
 programming which respects the mathematical definition of a function and
 declares what data is instead of specifying instructions to generate it. In
 Clojure you still have parts of your code where you do a lot of imperative
-operations with possible side-effects (this term will be explained in this
+operations with possible side effects (this term will be explained in this
 post), but generally Clojure is designed to promote declarative programming, and
 the code I wrote in Clojure at the time was more declarative and functional than
 any code I had written until that time.
@@ -33,7 +33,7 @@ was writing functional code, but I was starting to learn how to really use
 **what** my data is instead of **how** it should be computed.
 
 About a year and a half ago I went a step further: I added a strong type system
-to my code and eliminated side-effects. That is, I learned and began to use
+to my code and eliminated side effects. That is, I learned and began to use
 [Haskell](https://www.haskell.org). Some people think Haskell is an extremely
 complicated and theoretical language which has no practical application, but
 complicated is subjective. If you can get through a mathematics course and an
@@ -61,8 +61,8 @@ mutability. Mutability can of course be somewhat intuitive to the way we think
 about some problems: particularly if we think about graph theory.
 
 It turns out uncontrolled mutability can be dangerous though. You could, for
-example, have a segment of code which calculates some value and stores it in
-some variable and another segment of code which uses this value to come to a
+example, have a segment of code that calculates some value and stores it in some
+variable and another segment of code that uses this value to come to a
 conclusion. Later, another developer finds a reason to insert some code between
 both of these segments. In this code, the variable is modified. If attention to
 detail isn't paid, the conclusion could be incorrectly determined. This is
@@ -190,19 +190,19 @@ with production code! The solution here is for front to return
 (the `null` problem is a difficult one to avoid; it even pops up in this
 section).
 
-### Handle Side-Effects With Care
+### Handle Side Effects With Care
 
 In the functional programming world, people talk a lot about "launching the
 missiles". There are even
 [jokes about this in package repositories](https://hackage.haskell.org/package/acme-missiles-0.1.0.0/docs/Acme-Missiles.html).
-This expression is usually used to describe how dangerous code can be that
-interacts with the outside world. To be clear, interacting with the outside
-world is **not** a side-effect. But it can (and often is) implemented as one. A
-side-effect is anything that breaks functional purity. Functional purity is the
-idea that a function is nothing more than its mathematical definition: a map
-from a domain (its input) to a codomain (its return value). The PHP function
+This expression is usually used to describe how dangerous code that interacts
+with the outside world can be. To be clear, interacting with the outside world
+is **not** a side effect, but it can (and often is) implemented as one. A side
+effect is anything that breaks functional purity. Functional purity is the idea
+that a function is nothing more than its mathematical definition: a map from a
+domain (its input) to a codomain (its return value). The PHP function
 `file_get_contents` is definitely not a pure function. Reading that file is
-implemented as a side-effect. I can call `$a = file_get_contents('test.txt');`,
+implemented as a side effect. I can call `$a = file_get_contents('test.txt');`,
 replace the file, call `$b = file_get_contents('test.txt');` again, and
 `$a === $b` will not be true. This is not a valid map. One key goes to two
 values.
@@ -213,7 +213,7 @@ values.
               \
                 ----> "contents that are now in the file"
 
-One reason we tend to implement I/O as a side-effect is because at first it
+One reason we tend to implement I/O as a side effect is because at first it
 seems like it's the only way. Results from the outside world are not something
 about which we can make many statements at compile time. We can implement I/O
 without side effects though, and a great example is
