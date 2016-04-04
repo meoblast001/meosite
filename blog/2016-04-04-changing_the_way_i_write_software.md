@@ -81,7 +81,7 @@ Of course I'm not implementing state monads in C++, Java, or Ruby, but I do
 pay close attention to mutability and state I introduce into my code and try to
 keep it **controllable**. By not allowing the mutability and state that I
 introduce to get too complex, and by documenting scenarios that do become
-complex so that they are not easily passed over by other developers, the code
+complex (so that they are not easily passed over by other developers), the code
 becomes more durable to future changes. Here's a small (possibly trivial)
 example in Java:
 
@@ -171,20 +171,20 @@ set of all things which can be passed to your function, and a codomain, the set
 of all things that can come out of it. A function of type
 `String -> Bool -> Int`, or `int f(string x, bool y)`, has a domain containing
 all possible strings which can be formed with all possible boolean values
-which can be formed (obviously simply `true` and `false`), and a codomain of
+which can be formed (obviously simply `true` and `false`) and a codomain of
 every integer from -&#8734; to &#8734;. An important word associated with
 functions is totality. A total function can produce a value in its codomain for
 every value in its domain. This means if we can't produce an integer for every
 combination of strings and booleans, we have written a partial function. Partial
 functions are dangerous.
 
-We have a lot of partial functions we use as software developers, often without
-noticing. Think of the function `std::vector::front()` in C++. For
+We have a lot of partial functions that software developers frequently use,
+often without noticing. Think of the function `std::vector::front()` in C++. For
 `std::vector<T>` it should return a reference to a `T`. Can you think of a case
 where this `T` cannot be produced? If you guessed the empty vector, your answer
 is right. Or as the code I just compiled to test this example says during
 runtime: `Segmentation fault (core dumped)`. Imagine how much fun that would be
-with production code! The solution here is for front to return
+in production code! The solution here is for front to return
 `std::experimental::optional<T>`, a
 [proposed extension to the C++ language](http://en.cppreference.com/w/cpp/utility/optional)
 (the `null` problem is a difficult one to avoid; it even pops up in this
