@@ -38,24 +38,25 @@ to my code and eliminated side-effects. That is, I learned and began to use
 complicated and theoretical language which has no practical application, but
 complicated is subjective. If you can get through a mathematics course and an
 entire computer science degree, there's no reason you can't understand how to
-write Haskell code. That it has no practical application is completely wrong. A
-vast amount of libraries exist for the language and it is even used commercially
-by companies such as Facebook, Google, Intel, NVIDIA, Siemens, and Microsoft.
+write Haskell code. That it has no practical application is completely wrong,
+and Haskell's practical application can be seen by the vast amount of libraries
+that exist for the language and by the fact that it is used commercially by
+companies such as Facebook, Google, Intel, NVIDIA, Siemens, and Microsoft.
 Therefore I've naturally found quite a few practical applications of the
 programming language.
 
-In addition, it has taught me how to write code differently in other programming
-languages... almost all of them. From time to time (and in my work) I use
-programming languages that do not enforce or encourage functional purity, or
-those with weak type systems. Despite this drawback, the way I write software in
-those programming languages has changed a lot. I would like to reflect on these
-changes and share them.
+In addition, these programming languages have taught me how to write code
+differently in other programming languages... almost all of them. From time to
+time (and in my work) I use programming languages that do not enforce or
+encourage functional purity, or those with weak type systems. Despite this
+drawback, the way I write software in those programming languages has changed a
+lot. I would like to reflect on these changes and share them.
 
 ### Write Declarative Code
 
 Many programming languages allow you to change data behind a name. For example,
 you can set `foobar = 0` and then in the next line change the value of foobar,
-possibly using its existing valu e in this calculation. This is called
+possibly using its existing value in this calculation. This is called
 mutability. Mutability can of course be somewhat intuitive to the way we think
 about some problems: particularly if we think about graph theory.
 
