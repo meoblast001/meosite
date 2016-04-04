@@ -3,24 +3,26 @@ title: Changing the Way I Write Software
 ---
 
 Every day we all have new experiences. When we practice a profession or hobby,
-the new things we learn can affect the way we've done things before. As a
+the new things we learn can affect the way we continue to do old things. As a
 software developer, when I'm exposed to new programming languages, libraries,
-and tools, the way I use those which I already know changes. Until about three
+and tools, the way I use those, which I already know, changes. Until about three
 years ago, I was only familiar with imperative programming. In almost every line
-of code I was giving the machine an instruction about **what to do**.
+of code, I was giving the machine an instruction about **what to do**.
 
 Three years ago I started working with [Ruby](http://www.ruby-lang.org). Of
 course Ruby is still an imperative programming language, but it has a lot of
-features which promote and facilitate functional programming. Of course when I
-started using Ruby I used almost none of them.
+features that promote and facilitate functional programming. When I started
+using Ruby I used almost none of them.
 
 Then a half year later I started learning [Clojure](http://clojure.org). Clojure
-promotes quite a bit of functional and declarative programming. In Clojure you
-still have parts of your code where you do a lot of imperative operations with
-possible side-effects (this term will be explained in this post), but generally
-Clojure is designed to promote declarative programming, and the code I wrote in
-Clojure at the time was more declarative and functional than any code I wrote
-until that time.
+promotes quite a bit of functional and declarative programming. That is:
+programming which respects the mathematical definition of a function and
+declares what data is instead of specifying instructions to generate it. In
+Clojure you still have parts of your code where you do a lot of imperative
+operations with possible side-effects (this term will be explained in this
+post), but generally Clojure is designed to promote declarative programming, and
+the code I wrote in Clojure at the time was more declarative and functional than
+any code I had written until that time.
 
 Around the time I started learning Clojure was the same time I started doing
 professional Ruby work. The result was interesting. After experiencing Clojure,
@@ -30,15 +32,15 @@ was writing functional code, but I was starting to learn how to really use
 [higher order functions](/blog/introduction_higher_order_functions/) to explain
 **what** my data is instead of **how** it should be computed.
 
-About a year and a half ago I went a step further. I added a strong type system
+About a year and a half ago I went a step further: I added a strong type system
 to my code and eliminated side-effects. That is, I learned and began to use
 [Haskell](https://www.haskell.org). Some people think Haskell is an extremely
-complicated and theoretical language which has no practical application.
-Complicated is subjective, but if you can get through a mathematics course and
-an entire computer science degree, there's no reason you can't understand how to
-write Haskell code. No practical application is completely wrong. A vast amount
-of libraries exist for the language and it is even used commercially by
-companies such as Facebook, Google, Intel, NVIDIA, Siemens, and Microsoft.
+complicated and theoretical language which has no practical application, but
+complicated is subjective. If you can get through a mathematics course and an
+entire computer science degree, there's no reason you can't understand how to
+write Haskell code. That it has no practical application is completely wrong. A
+vast amount of libraries exist for the language and it is even used commercially
+by companies such as Facebook, Google, Intel, NVIDIA, Siemens, and Microsoft.
 Therefore I've naturally found quite a few practical applications of the
 programming language.
 
