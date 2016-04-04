@@ -25,7 +25,7 @@ Hakyll SASS is a library for the Haskell static website generator
 [SASS](http://sass-lang.com/) stylesheets. The package can be found on the
 [Hakyll SASS Hackage page](https://hackage.haskell.org/package/hakyll-sass).
 
-### PayPal REST Client for Haskell
+#### PayPal REST Client for Haskell
 ###### Since February 2016 - [On GitHub](https://github.com/meoblast001/paypal-rest-client)
 This library allows Haskell developers to build applications which connect with
 PayPal's REST API. Currently supported features include creating, modifying, and
