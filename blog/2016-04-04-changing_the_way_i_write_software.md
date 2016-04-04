@@ -213,41 +213,43 @@ values.
               \
                 ----> "contents that are now in the file"
 
-One reason we tend to implement this as a side-effect is because at first it
-seems like it's the only way. Results from the outside world is not something
+One reason we tend to implement I/O as a side-effect is because at first it
+seems like it's the only way. Results from the outside world are not something
 about which we can make many statements at compile time. We can implement I/O
 without side effects though, and a great example is
 [the IO monad](https://www.haskell.org/tutorial/io.html). I will not go into
-length explaining it, but simplified you are passing an action and a handler
-function (describing what will be done with the result of this action) to some
-function, and are getting a representation of this action paired with this
-handler. Passing the same action and the same handler function to this function
-will always map to the same pair.
+length explaining it, but simplified: you pass an action and a handler function
+(describing what will be done with the result of this action) to a bind function
+and get a representation of this action paired with this handler. Passing the
+same action and the same handler function to bind will always map to the same
+pair.
 
 This isn't particularly easy to put into practice in programming languages
-which are not built with monads in mind though (trust me, the syntax gets very
-ugly very fast, although it is possible). There is something we can take away
-from the IO monad and use in other programming languages though. The wonderful
-thing about the IO monad is that the fact that IO is happening is represented in
-the return type. A function that does not have IO in its return type cannot
-perform I/O or call any other function which performs I/O. This prevents your
+which are not built with monads in mind (trust me, the syntax gets very ugly
+very fast, although it is possible). There is something we can take away from
+the IO monad and use in other programming languages though. The wonderful thing
+about the IO monad is that the fact that I/O is happening is represented in the
+return type. A function that does not have IO in its return type cannot perform
+I/O or call any other function which does so. This prevents your
 `int addTwoNumbers(int x, int y)` from suddenly deleting System32 or launching
-Russia's nuclear arsenal because it doesn't have IO in its return type (I'm not
-claiming you or I have such a procedure which can do either of those things).
+Russia's nuclear arsenal (I'm not claiming you or I have such a procedure which
+can do either of those things). This is because it doesn't have IO in its return
+type.
 
 If we're using side effects instead of something like an IO monad though, we
-can't really define this in the return type though. Therefore we need to fall
-back to plan B. When the type system doesn't let us specify something, we
-document it! In general what this taught me is that if it is not obvious that
-a procedure in some language will perform I/O (or sometimes even if it is
-obvious), I should document the procedure with information about the interaction
-it is making with the outside world.
+can't really define this in the return type. Therefore we need to fall back to
+plan B. When the type system doesn't let us specify something, we document it!
+In general what this taught me is that if it is not obvious that a procedure in
+some language will perform I/O (or sometimes even if it is obvious), I should
+document the procedure with information about the interaction it is making with
+the outside world.
 
 ### Conclusion
 
 I'm probably missing a few things I've learned here, but that's not a problem.
-My goal here is to share what I've learned and how I've changed the way I write
+My goal is to share what I've learned and how I've changed the way I write
 software. I encourage others (such as you, the reader) to learn a new
-programming language with a different programming paradigm. It will probably do
-the same for you that it did for me. You will find the advantages of this new
-language or paradigm and try to integrate it into your existing work.
+programming language with a different programming paradigm from that with which
+you are familiar. It will probably do the same for you that it did for me. You
+will find the advantages of this new language or paradigm and try to integrate
+it into your existing work.
