@@ -128,8 +128,8 @@ code.
 
 Is all of this really necessary? This concept of `null` is usually used to
 represent the lack of something. Something is missing, or an error occurred
-which made it impossible to generate the data we want. Of course we need a way
-to represent nothingness, but `null` is **NOT** the solution.
+that made it impossible to generate the data we want. Of course we need a way to
+represent nothingness, but `null` is **NOT** the solution.
 
 <div style="text-align: right;">
   "I call it my billion-dollar mistake. It was the invention of the null
@@ -148,7 +148,7 @@ query whether there actually is something or not, and then use it. You also can
 build a range of convenience functions to work on your option type. It is
 important though that you cannot treat your option type the same as you would
 treat the content inside. You **must** consider the case in which there is
-nothing. Things which are not contained in an option type cannot be nothing
+nothing, and things that are not contained in an option type cannot be nothing
 (they must **always** contain a value).
 
 Consider the example of a contact. Within this contact type you require a phone
@@ -167,16 +167,16 @@ we shouldn't.
 ### Consider Your Complete Domain and Codomain
 
 In mathematics a function is nothing more than a map. You have a domain, or the
-set of all things which can be passed to your function, and a codomain, the set
+set of all things that can be passed to your function, and a codomain, the set
 of all things that can come out of it. A function of type
 `String -> Bool -> Int`, or `int f(string x, bool y)`, has a domain containing
-all possible strings which can be formed with all possible boolean values
-which can be formed (obviously simply `true` and `false`) and a codomain of
-every integer from -&#8734; to &#8734;. An important word associated with
-functions is totality. A total function can produce a value in its codomain for
-every value in its domain. This means if we can't produce an integer for every
-combination of strings and booleans, we have written a partial function. Partial
-functions are dangerous.
+all possible strings that can be formed paired with all possible boolean values
+that can be formed (obviously simply `true` and `false`) and a codomain of every
+integer from -&#8734; to &#8734;. An important word associated with functions is
+totality. A total function can produce a value in its codomain for every value
+in its domain. This means if we can't produce an integer for every combination
+of strings and booleans, we have written a partial function. Partial functions
+are dangerous.
 
 We have a lot of partial functions that software developers frequently use,
 often without noticing. Think of the function `std::vector::front()` in C++. For
@@ -224,15 +224,15 @@ and get a representation of this action paired with this handler. Passing the
 same action and the same handler function to bind will always map to the same
 pair.
 
-This isn't particularly easy to put into practice in programming languages
-which are not built with monads in mind (trust me, the syntax gets very ugly
-very fast, although it is possible). There is something we can take away from
-the IO monad and use in other programming languages though. The wonderful thing
-about the IO monad is that the fact that I/O is happening is represented in the
-return type. A function that does not have IO in its return type cannot perform
-I/O or call any other function which does so. This prevents your
+This isn't particularly easy to put into practice in programming languages that
+are not built with monads in mind (trust me, the syntax gets very ugly very
+fast, although it is possible). There is something we can take away from the IO
+monad and use in other programming languages though. The wonderful thing about
+the IO monad is that the fact that I/O is happening is represented in the return
+type. A function that does not have IO in its return type cannot perform I/O or
+call any other function that does so. This prevents your
 `int addTwoNumbers(int x, int y)` from suddenly deleting System32 or launching
-Russia's nuclear arsenal (I'm not claiming you or I have such a procedure which
+Russia's nuclear arsenal (I'm not claiming you or I have such a procedure that
 can do either of those things). This is because it doesn't have IO in its return
 type.
 
