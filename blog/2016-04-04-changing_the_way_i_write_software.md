@@ -164,6 +164,14 @@ much safer than if everything could be `null` or not, leaving it up to
 interpretation to decide what things we should check for `null` and what things
 we shouldn't.
 
+If I'm dealing with a codebase that uses `null` and it is impractical to begin
+using an option type in the project, there is something else I've learned I can
+do: I think about what I want to return (is there a case where I may actually
+want to return `null` or do I always want a value to be returned?), I ensure
+that I am only returning what I want, and I properly document cases where `null`
+actually is returned and explain in what cases that occurs. This might not
+provide a lot of security, but at least it's something.
+
 ### Consider Your Complete Domain and Codomain
 
 In mathematics a function is nothing more than a map. You have a domain, or the
