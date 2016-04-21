@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<script type="text/javascript" src="/js/source_stats.js"></script>
+
+<div id="primary-image">
+  <div class="image"></div>
+</div>
+
+<div id="body">
+  <p>
+    You've reached the website of Braden Walters, a software developer living in
+    Dresden, Germany. I have a professional specialisation in web development,
+    but also have non-professional experience with game development, mobile
+    development, and 3D graphics.
+  </p>
+
+  <p>
+    In web development I see myself primarily as a backend developer. My
+    experience with web frameworks includes mostly macro-frameworks, such as
+    <a href="http://yesodweb.com" target="blank">Yesod</a>,
+    <a href="http://rubyonrails.org" target="blank">Ruby on Rails</a>,
+    <a href="http://djangoproject.com" target="blank">Django</a>,
+    <a href="http://framework.zend.com" target="blank">Zend Framework</a>,
+    <a href="http://asp.net/mvc" target="blank">ASP.NET MVC</a>.
+    I also have a moderate amount of front-end experience, including use of
+    JavaScript and CoffeeScript as well as libraries like
+    <a href="http://jquery.org" target="blank">jQuery</a> and
+    <a href="http://underscorejs.org" target="blank">Underscore</a>.
+  </p>
+
+  <p>
+    I have a strong preference for functional and declarative programming, as
+    well as strong type systems. I value the predictability of functional code
+    as well as the compile-time checks that a strong type system offers. Such
+    compile-time checks allow me to write code for which the compiler can
+    detect most defects before the code ever reaches a production system.
+  </p>
+</div>
+
+<div id="tools">
+</div>
+
+<div id="body">
+  All of my personal projects are available on GitHub. Unlike my professional
+  work, which is quite specialised, my personal projects are far more varied and
+  therefore show a lot about my preferences in tools and types of projects, as
+  well as other compentencies which I have developed. In addition, all of this
+  code is Free and Open Source (FOSS) and therefore you can look at it and do
+  almost whatever you want to with it. Have fun!
+</div>
+
+<script id="source-stats-item-template" type="text/underscore">
+  <div class="chart-item">
+    <table>
+      <tbody>
+        <tr>
+          <td><%= language %></td>
+          <td><%= lines %>&nbsp;lines</td>
+          <td><canvas class="canvas"></canvas></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</script>
+
+<div id="source-stats">
+  <table class="loading">
+    <tbody>
+      <tr>
+        <td class="loading-text">Unfortunately, an error has occurred.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="chart">
+    <h3>Lines of Code Written on GitHub</h3>
+    <div class="items"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+// <![CDATA[
+  jQuery(document).ready(function() {
+    var source_stats = new SourceStats(jQuery('#source-stats'),
+      jQuery('#source-stats-item-template'));
+    source_stats.loadData('meoblast001', function() {
+        source_stats.render(300, 25);
+      });
+  });
+// ]]>
+</script>

@@ -78,6 +78,10 @@ main = hakyllWith config $ do
     let compressCssItem = fmap compressCss
     compile (compressCssItem <$> sassCompiler)
 
+  match "js/*.js" $ do
+    route idRoute
+    compile copyFileCompiler
+
   match "js/*.coffee" $ do
     route $ setExtension "js"
     compile coffeeScriptCompiler
@@ -87,6 +91,7 @@ main = hakyllWith config $ do
   match "pages/**.md" $ do
     route $ siteRoute "pages/" "html"
     compile $ pandocCompiler
+      >>= loadAndApplyTemplate "templates/page.html" siteContext
       >>= loadAndApplyTemplate "templates/default.html" siteContext
       >>= relativizeUrls
 
@@ -109,9 +114,10 @@ main = hakyllWith config $ do
         >>= loadAndApplyTemplate "templates/default.html" archiveCtx
         >>= relativizeUrls
 
-  match "index.md" $ do
-    route $ setExtension "html"
-    compile $ pandocCompiler
+  create ["index.html"] $ do
+    route idRoute
+    compile $ makeItem ""
+      >>= loadAndApplyTemplate "templates/index.html" siteContext
       >>= loadAndApplyTemplate "templates/default.html" siteContext
       >>= relativizeUrls
 

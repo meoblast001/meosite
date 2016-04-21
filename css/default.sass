@@ -4,16 +4,6 @@ body
   margin: 0px
   background-color: rgb(249, 249, 249)
 
-#header
-  width: 100%
-  height: 100px
-  background-color: rgb(240, 240, 240)
-  border-bottom: 1px #000000 solid
-
-#header td
-  padding-left: 10px
-  padding-right: 10px
-
 #navigation
   background-color: rgb(220, 220, 220)
   border-bottom: 1px solid #000000
@@ -23,21 +13,36 @@ body
   padding: 0px
   margin: 0px
 
-#navigation li
-  float: left
-  margin: 0px
-  padding: 0px
+  li
+    float: right
+    margin: 0px
+    padding: 0px
 
-#navigation li a
-  color: #000000
-  display: block
-  text-decoration: none
-  padding: 10px 5px
-  border-right: 1px solid #000000
+  li#logo
+    float: left
+    font-size: 24px
+    font-weight: bold
+    padding: 10px 5px
+    border-right: 1px solid #000000
+
+    a
+      color: #000000
+      display: block
+      text-decoration: none
+      padding: 0px
+      border: none
+
+  li.item a
+    color: #000000
+    display: block
+    text-decoration: none
+    padding: 16px 5px
+    border-left: 1px solid #000000
 
 #body
   width: 800px
   padding-top: 10px
+  padding-bottom: 10px
   margin-left: auto
   margin-right: auto
 
