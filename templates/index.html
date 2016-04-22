@@ -5,7 +5,7 @@
   <div class="image"></div>
 </div>
 
-<div id="body">
+<div class="body">
   <p>
     You've reached the website of Braden Walters, a software developer living in
     Dresden, Germany. I have a professional specialisation in web development,
@@ -39,13 +39,15 @@
 <div id="tools">
 </div>
 
-<div id="body">
-  All of my personal projects are available on GitHub. Unlike my professional
-  work, which is quite specialised, my personal projects are far more varied and
-  therefore show a lot about my preferences in tools and types of projects, as
-  well as other compentencies which I have developed. In addition, all of this
-  code is Free and Open Source (FOSS) and therefore you can look at it and do
-  almost whatever you want to with it. Have fun!
+<div class="body">
+  <p>
+    All of my personal projects are available on GitHub. Unlike my professional
+    work, which is quite specialised, my personal projects are far more varied
+    and therefore show a lot about my preferences in tools and types of
+    projects, as well as other compentencies which I have developed. In
+    addition, all of this code is Free and Open Source (FOSS) and therefore you
+    can look at it and do almost whatever you want to with it. Have fun!
+  </p>
 </div>
 
 <script id="source-stats-item-template" type="text/underscore">
@@ -54,8 +56,10 @@
       <tbody>
         <tr>
           <td><%= language %></td>
-          <td><%= lines %>&nbsp;lines</td>
-          <td><canvas class="canvas"></canvas></td>
+          <td><%= percent %>%</td>
+          <td>
+            <canvas class="canvas" width="300" height="30"></canvas>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -63,17 +67,27 @@
 </script>
 
 <div id="source-stats">
+  <div class="chart">
+    <h3>Code Written on GitHub *</h3>
+    <div class="items"></div>
+    <div class="notice">
+      * These statistics include all code written in all non-forked
+      repositories. This may be slightly inaccurate, as code from other
+      contributors may exist in my repositories, and code that I wrote may exist
+      in foreign repositories. Regardless, the statistics give an idea of how
+      much I have written in each language.
+    </div>
+  </div>
+
   <table class="loading">
     <tbody>
       <tr>
-        <td class="loading-text">Unfortunately, an error has occurred.</td>
+        <td class="loading-text">
+          This can only be displayed with JavaScript.
+        </td>
       </tr>
     </tbody>
   </table>
-  <div class="chart">
-    <h3>Lines of Code Written on GitHub</h3>
-    <div class="items"></div>
-  </div>
 </div>
 
 <script type="text/javascript">
@@ -82,7 +96,7 @@
     var source_stats = new SourceStats(jQuery('#source-stats'),
       jQuery('#source-stats-item-template'));
     source_stats.loadData('meoblast001', function() {
-        source_stats.render(300, 25);
+        source_stats.render();
       });
   });
 // ]]>

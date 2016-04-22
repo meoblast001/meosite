@@ -35,31 +35,36 @@ class SourceStats
             callback()
 
   # Public: Renders the horizontal bar graphs.
-  #
-  # max_length: Maximum width of a bar.
-  # bar_height: Height of a bar.
-  render: (max_length, bar_height) ->
+  render: () ->
     line_counts = (value for key, value of this.code_data)
     max_value = line_counts.
       reduce(((max, cur) -> return if cur > max then cur else max), 0)
-    scale_factor = max_length / max_value
+    total_lines = line_counts.reduce(((sum, count) -> sum + count), 0)
 
     this.loading.hide()
     this.chart.show('slow')
 
     items_container = this.chart.find('.items')
     for language, lines of this.code_data
-      element = $(this.template({ language, lines }))
+      element = $(this.template({
+          language,
+          percent: Math.ceil(lines / total_lines * 100)
+        }))
       element.appendTo(items_container)
 
-      canvas = element.find('.canvas').width(max_length).height(bar_height)
+      canvas = element.find('.canvas')
       if canvas.length == 0
         this.loading_text.text(this.error_text)
         return
+
+      scale_factor = canvas.width() / max_value
+
       context = canvas[0].getContext('2d')
       context.fillStyle = '#000000'
+      context.fillRect(0, 0, lines * scale_factor, canvas.height())
       context.strokeStyle = '#ffffff'
-      context.fillRect(0, 0, lines * scale_factor, bar_height * 10)
+      context.lineWidth = 2
+      context.strokeRect(0, 0, lines * scale_factor, canvas.height())
 
   # Public: Displays the loading text, optionally with a "x / y" of completed
   #   elements.
