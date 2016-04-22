@@ -24,7 +24,7 @@ preference for functional programming and the use of strong type systems or
 static analysis to detect defects before run-time and to make analysis and
 maintenance of code easier and more accurate.
 
-Check me out at [<img src="http://monitorama.com/2013/images/github_logo.png" height="30px" />](https://github.com/meoblast001),
+Check me out at [<img alt="GitHub" src="http://monitorama.com/2013/images/github_logo.png" height="30px" />](https://github.com/meoblast001),
 where I upload all of my free and open source personal projects.
 
 #### Language
