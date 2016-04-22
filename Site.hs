@@ -5,6 +5,7 @@ module Main where
 
 import Configuration
 import Data.Functor
+import Data.Maybe
 import Data.Monoid (mempty, mappend)
 import Hakyll
 import Hakyll.Web.Sass
@@ -48,8 +49,8 @@ xelatex item = do
       pdfPath = replaceExtension texPath "pdf"
   unsafeCompiler $ do
     writeFile texPath $ itemBody item
-    _ <- system $ unwords ["xelatex", "-halt-on-error",
-        "-output-directory", tmpDir, texPath, ">/dev/null", "2>&1"]
+    _ <- system $ unwords ["xelatex", "-halt-on-error", "-output-directory",
+                           tmpDir, texPath, ">/dev/null", "2>&1"]
     return ()
   makeItem $ TmpFile pdfPath
 
@@ -59,11 +60,29 @@ coffeeScriptCompiler = do
   output <- unsafeCompiler $ readCreateProcess (proc "coffee" ["-cs"]) input
   makeItem output
 
+compileFixedHeight :: Integer -> Bool -> Compiler (Item TmpFile)
+compileFixedHeight height isTransparent = do
+  originalPath <- toFilePath <$> itemIdentifier <$> getResourceBody
+  extension <- takeExtension <$> fromMaybe ".png" <$>
+               (getUnderlying >>= getRoute)
+  TmpFile resultPath <- newTmpFile ("imagemagick" ++ extension)
+  unsafeCompiler $ do
+    _ <- system $ unwords (["convert", "-geometry", "x75"] ++
+                           (if isTransparent then ["-background", "transparent"]
+                                             else []) ++
+                           [originalPath, resultPath])
+    return ()
+  makeItem $ TmpFile resultPath
+
 main :: IO ()
 main = hakyllWith config $ do
   match "images/*" $ do
     route idRoute
     compile copyFileCompiler
+
+  match "images/tools/*.svg" $ do
+    route $ setExtension "png"
+    compile $ compileFixedHeight 300 True
 
   match "docs/*.pdf" $ do
     route idRoute
