@@ -7,3 +7,4 @@
 * https://commons.wikimedia.org/wiki/File:Django_logo.svg
 * https://commons.wikimedia.org/wiki/File:Ruby_on_Rails_logo.svg
 * https://commons.wikimedia.org/wiki/File:Opengl-logo.svg
+* https://commons.wikimedia.org/wiki/File:Android_robot.svg
