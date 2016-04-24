@@ -83,6 +83,12 @@ Underscore. Underscore provides many abstract higher order functions to
 JavaScriptwhich are very useful and reduce code duplication. In addition,
 Underscore offers a powerful templating system which I frequently use.
 
+#### Miscellaneous Web-Dev
+
+**Hakyll:** I have written multiple websites, including this one, with the
+static site generator Hakyll. The frameworks simplifies building static websites
+and can convert various source resources to their publish format.
+
 ### Game Development
 
 **OpenGL:** Although my OpenGL experience is not extremely advanced, I have
@@ -128,3 +134,16 @@ proficiency.
 intermittently since. My knowledge of Swedish can be useful at times, but it
 is very limited due to difficulty finding opportunities to use the language.
 My proficiency is approximately A1.
+
+## Hobbies
+
+**Culture:** As a trilingual person, it seems to me fairly natural that I enjoy
+foreign culture. Although my language skills are limited to European languages,
+I enjoy cultures from all around the world. I also love to meet new people from
+around the world. I am actively involved in (and help organise) an international
+group in Dresden which meets regularly. It is very fun to meet new people from
+many places and do things together with them.
+
+**Travel:** As a natural result of my love of culture, I love travel. But even
+if I'm not experiencing a new culture, I like to travel to new places. I love
+seeing new things, whether that be a new city or some place in nature.
