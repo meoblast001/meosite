@@ -98,14 +98,18 @@ vertex shaders as well. I generally use OpenGL 2.1, but the majority of the
 features I use were already available at OpenGL 1.0. All of my OpenGL work has
 been in hobby projects.
 
-**Artificial Intelligence:**
+**Artificial Intelligence:** Through a course that I took during my
+Bachelor's studies and through development of the game Thugaim, I have
+developed an understanding of elementary game AI, including path finding with
+the A* algorithm, finite and fuzzy state machines, and influence maps.
 
 **OpenAL:** I have used OpenAL in personal projects to provide cross-platform
 audio in 3D applications. I have not used the 3D audio features that the API
 offers, but I have used it to play background music, specifically from OGG
 Vorbis files. Like with OpenGL, my OpenAL experience is only in hobby projects.
 
-**Bullet Physics:**
+**Bullet Physics:** I have some experience with Bullet through experimenting
+to create simple simulations with rigid bodies, gravity, force, and torque.
 
 ### Mobile Development
 
