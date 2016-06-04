@@ -135,9 +135,11 @@ main = hakyllWith config $ do
 
   create ["index.html"] $ do
     route idRoute
+    let indexCtx = constField "title" "Homepage" `mappend`
+                   siteContext
     compile $ makeItem ""
-      >>= loadAndApplyTemplate "templates/index.html" siteContext
-      >>= loadAndApplyTemplate "templates/default.html" siteContext
+      >>= loadAndApplyTemplate "templates/index.html" indexCtx
+      >>= loadAndApplyTemplate "templates/default.html" indexCtx
       >>= relativizeUrls
 
   let cvWithLanguage language = do
