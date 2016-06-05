@@ -15,7 +15,6 @@ body
   border-left: 1px solid #000000
   border-right: 1px solid #000000
   list-style: none
-  min-width: 800px
   width: 80%
   padding: 0px
   margin: 0px
@@ -50,8 +49,28 @@ body
     line-height: 40px
     border-left: 1px solid #000000
 
+@media (max-width: 800px)
+  #navigation
+    li
+      display: block
+      text-align: left
+
+    li#logo
+      float: none
+      border-right: none
+      border-bottom: 1px solid #000000
+
+    li.item
+      border-bottom: 1px dashed #888888
+
+      a
+        padding-left: 20px
+        border-left: none
+
+    li.item:last-child
+      border-bottom: none
+
 .body
-  min-width: 800px
   width: 80%
   padding-top: 10px
   padding-bottom: 10px
