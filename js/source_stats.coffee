@@ -26,14 +26,16 @@ class SourceStats
     $.ajax '/code-graph.json', {
         dataType: 'json'
         success: (code_data) =>
-          this.code_data = code_data
+          code_data_array = ({language, lines} for language, lines of code_data)
+          this.code_data =
+            code_data_array.sort((lhs, rhs) -> rhs.lines - lhs.lines)
           callback()
         error: => this.loading_text.text(this.error_text)
       }
 
   # Public: Renders the horizontal bar graphs.
   render: () ->
-    line_counts = (value for key, value of this.code_data)
+    line_counts = (code_datum.lines for code_datum in this.code_data)
     max_value = line_counts.
       reduce(((max, cur) -> return if cur > max then cur else max), 0)
     total_lines = line_counts.reduce(((sum, count) -> sum + count), 0)
@@ -42,7 +44,10 @@ class SourceStats
     this.chart.show('slow')
 
     items_container = this.chart.find('.items')
-    for language, lines of this.code_data
+    for code_datum in this.code_data
+      language = code_datum.language
+      lines = code_datum.lines
+
       element = $(this.template({
           language,
           percent: Math.ceil(lines / total_lines * 100)
