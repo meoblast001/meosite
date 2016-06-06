@@ -17,8 +17,9 @@ main = do
     -- User must provide a GitHub username, an output JSON file path, and an
     -- error log file path.
     [username, output, logfile] ->
-      process username output `catch` logException logfile
-    _ -> error "Usage: code-graph USERNAME OUTPUT_JSON ERROR_LOG_FILE"
+      let outputFullPath = output ++ "/code-graph.json"
+      in process username outputFullPath `catch` logException logfile
+    _ -> error "Usage: code-graph USERNAME OUTPUT_JSON_DIR ERROR_LOG_FILE"
 
 -- |Run program for a GitHub user and an output JSON file path.
 process :: Username -> FilePath -> IO ()
