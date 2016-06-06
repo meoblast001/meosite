@@ -91,9 +91,6 @@
           width: 100px
           text-overflow: ellipsis
 
-        td.canvas-td
-          width: 300px
-
   .notice
     margin-left: auto
     margin-right: auto
@@ -101,6 +98,13 @@
     font-style: italic
     font-size: 12px
     padding-top: 10px
+
+@media (max-width: 800px)
+  #source-stats
+    .chart-item
+      table
+        td.canvas-td
+          display: none
 
 #account-links
   text-align: center
