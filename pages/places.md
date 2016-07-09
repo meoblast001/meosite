@@ -42,6 +42,9 @@ title: Places I've Been
     <location longitude="7.4674" latitude="51.5134" name="Dortmund" />
     <location longitude="2.1700" latitude="41.3865" name="Barcelona" />
     <location longitude="-3.70871" latitude="40.41424" name="Madrid" />
+    <location longitude="10.8921" latitude="48.3633" name="Augsburg" />
+    <location longitude="11.5707" latitude="48.1355" name="Muenchen" />
+    <location longitude="14.0840" latitude="50.9573" name="Rathen" />
   </locations>
 </script>
 
