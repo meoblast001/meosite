@@ -1,5 +1,6 @@
 ---
 title: Changing the Way I Write Software
+identifier: changing_the_way_i_write_software
 ---
 
 Every day we all have new experiences. When we practice a profession or hobby,

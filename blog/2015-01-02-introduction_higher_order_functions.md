@@ -1,5 +1,6 @@
 ---
 title: An Introduction to Higher Order Functions
+identifier: introduction_higher_order_functions
 ---
 
 When we create procedures or methods in many programming languages like C, Java,
