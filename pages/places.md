@@ -45,6 +45,8 @@ title: Places I've Been
     <location longitude="10.8921" latitude="48.3633" name="Augsburg" />
     <location longitude="11.5707" latitude="48.1355" name="Muenchen" />
     <location longitude="14.0840" latitude="50.9573" name="Rathen" />
+    <location longitude="19.93956" latitude="50.06153" name="Krakow" />
+    <location longitude="14.42319" latitude="50.08745" name="Prague" />
   </locations>
 </script>
 
