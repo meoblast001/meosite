@@ -1,7 +1,7 @@
 \documentclass[8pt,a4paper]{moderncv}
 \usepackage[utf8]{inputenc}
-\usepackage[top=0.5in, left=0.5in, right=0.5in, bottom=1.0in]{geometry}
-% \usepackage[top=0.3in, left=0.3in, right=0.3in, bottom=0.8in]{geometry}
+% \usepackage[top=0.5in, left=0.5in, right=0.5in, bottom=1.0in]{geometry}
+\usepackage[top=0.3in, left=0.3in, right=0.3in, bottom=0.8in]{geometry}
 \moderncvtheme[black]{casual}
 \usepackage{lmodern}
 \usepackage[english,ngerman]{babel}
@@ -50,7 +50,6 @@
   \cventry{\en{Born}\de{Geburt}}
           {\en{23 February 1993}\de{23. Februar 1993}}
           {Youngstown, Ohio}{}{}{}
-  \de{\cventry{Familienstand}{ledig}{}{}{}{}}
 
   \section{\textbf{\en{Education}\de{Ausbildung}}}
   \subsection{\en{Academic Education and Professional Development}\ignorespaces
@@ -114,25 +113,33 @@
   \cventry{\en{Mathematics}\de{Mathematik}}
           {\en{Calculus, Matrix Theory, Group Theory}\ignorespaces
            \de{Integralrechnung, Matrixtheorie, Gruppentheorie}}{}{}{}{}
-  \cventry{\en{General Tools}\de{Allgemeine Tools}}{Git, PostgreSQL}{}{}{}{}
+  \cventry{\en{General Tools}\de{Allgemeine Tools}}
+          {Git, PostgreSQL, RabbitMQ}{}{}{}{}
   \cventry{\en{Tools for Web Development}\de{Tools f\"ur Webentwicklung}}
           {Ruby on Rails, Django, Yii Framework, Microsoft MVC, Zend Framework
            1, Hakyll, jQuery, Underscore.js}
           {}{}{}{}
   \cventry{\en{Tools for Mobile Development}\de{Tools f\"ur Mobileentwicklung}}
           {Android SDK/API}{}{}{}{}
+  \cventry{\en{Tools for Application Development}
+           \de{Tools f\"ur Anwendungsentwicklung}}
+          {Qt}{}{}{}{}
   \cventry{\en{Tools for Graphics Software / Game Development}
            \de{Tools f\"ur Grafiksoftware / Spielentwicklung}}
           {OpenGL 2.1, OpenAL, Bullet Physics}{}{}{}{}
 
   \section{\textbf{\en{Work Experience}\de{Arbeitserfahrungen}}}
+  \subsection{\en{Application Development}\de{Anwendungsentwicklung}}
+  \cventry{\en{Since Feb 2017}\de{Seit Feb 2017}}{HicknHack Software GmbH}
+          {\en{Client projects in C++ with Qt}
+           \de{Kundenprojekte in C++ mit Qt}}{}{}{}
   \subsection{\en{Web Development}\de{Webentwicklung}}
-  \cventry{\en{since Jun 2015}\de{seit Jun 2015}}{Unister Travel GmbH.}
+  \cventry{\en{Jun 2015 - Jan 2017}\de{Jun 2015 - Jan 2017}}
+          {Unister Travel Betriebsgesellschaft mbH}
           {\en{Backend administration web software and automation for flight
                portals in PHP}\ignorespaces
            \de{Backend-Verwaltungswebsofware und Automation f\"ur Flugportale
-               auf PHP}}{}{}
-          {}
+               auf PHP}}{}{}{}
   \cventry{\en{Sep 2013 - Feb 2015}\de{Sep 2013 - Feb 2015}}
           {Brilex Industries, Inc.}
           {\en{Web software for internal usage in C\# with Microsoft
