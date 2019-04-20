@@ -12,6 +12,7 @@ import Hakyll.Web.Sass
 import System.FilePath
 import System.Process
 import Text.Regex (mkRegex, subRegex)
+import Text.Replace
 
 toIndex :: String -> Identifier -> FilePath
 toIndex extension ident =
@@ -53,6 +54,14 @@ xelatex item = do
                            tmpDir, texPath, ">/dev/null", "2>&1"]
     return ()
   makeItem $ TmpFile pdfPath
+
+setCvLanguage :: String -> String -> String
+setCvLanguage language content =
+  replaceWithList [Replace "$LANG$" language] content
+
+setCvItemLanguage :: String -> Compiler (Item String) -> Compiler (Item String)
+setCvItemLanguage language' body =
+  fmap (fmap (\content -> setCvLanguage language' content)) body
 
 coffeeScriptCompiler :: Compiler (Item String)
 coffeeScriptCompiler = do
@@ -145,10 +154,7 @@ main = hakyllWith config $ do
   let cvWithLanguage language = do
         route $ composeRoutes (gsubRoute "cv" (const ("cv-" ++ language)))
                               (setExtension "pdf")
-        let setLanguage language' body =
-              fmap (fmap (\content -> "\\providecommand\\locale{" ++
-                                      language' ++ "}" ++ content)) body
-        compile (setLanguage language getResourceBody >>= xelatex)
+        compile (setCvItemLanguage language getResourceBody >>= xelatex)
 
   match "docs/cv.tex" $ version "en" $ cvWithLanguage "en"
   match "docs/cv.tex" $ version "de" $ cvWithLanguage "de"
