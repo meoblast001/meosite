@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="/css/index.css" />
-<script type="text/javascript" src="/js/source_stats.js"></script>
 
 <div id="primary-image">
   <div class="image"></div>
@@ -8,7 +7,6 @@
       <tr>
         <td>
           Software Developer<br />
-          Web / Game / Mobile<br />
           Dresden, Germany
         </td>
       </tr>
@@ -18,157 +16,12 @@
 
 <div class="body">
   <p>
-    I am Braden Walters, a software developer living in Dresden, Germany.
-    Welcome to my personal website. I have a professional specialisation in web
-    development, but also have non-professional experience with game
-    development, mobile development, and 3D graphics.
-  </p>
-
-  <p>
-    In web development I see myself primarily as a backend developer. My
-    experience with web frameworks includes mostly macro-frameworks, such as
-    <a href="http://yesodweb.com" target="blank">Yesod</a>,
-    <a href="http://rubyonrails.org" target="blank">Ruby on Rails</a>,
-    <a href="http://djangoproject.com" target="blank">Django</a>,
-    <a href="http://framework.zend.com" target="blank">Zend Framework</a>,
-    <a href="http://asp.net/mvc" target="blank">ASP.NET MVC</a>.
-    I also have a moderate amount of front-end experience, including use of
-    JavaScript and CoffeeScript as well as libraries like
-    <a href="http://jquery.org" target="blank">jQuery</a> and
-    <a href="http://underscorejs.org" target="blank">Underscore</a>.
-  </p>
-
-  <p>
-    My mobile development experience involves
-    <a href="https://www.android.com/" target="blank">Android</a>&trade;
-    application development in my personal projects. This experience was gained
-    through game development that relies significantly on the Android API, using
-    multiple activities, intents, media playback functionality, resources, and
-    more.
-  </p>
-
-  <p>
-    Through personal desktop game projects, including developing toy game
-    engines, I've used much of
-    <a href="https://www.opengl.org/" target="blank">OpenGL</a> 2.1 and have
-    used parts of <a href="https://www.openal.org/" target="blank">OpenAL</a>
-    and <a href="http://bulletphysics.org/" target="blank">Bullet Physics</a>.
-    I've used OpenGL bindings in C++, Java, and Haskell, and OpenAL and Bullet
-    Physics in C++.
-  </p>
-
-  <p>
-    I have a strong preference for functional and declarative programming, as
-    well as strong type systems. I value the predictability of functional code
-    as well as the compile-time checks that a strong type system offers. Such
-    compile-time checks allow me to write code for which the compiler can
-    detect most defects before the code ever reaches a production system or
-    release build.
+    I'm a software developer that lives in Dresden, Germany. This is my personal
+    website. You can find professional information about me here. Some content
+    may not be software-related, such as some blog posts and photography
+    (still getting around to that though).
   </p>
 </div>
-
-<div id="tools">
-  <h3>Tools I Use</h3>
-  <table>
-    <tr>
-      <td>
-        <a href="https://git-scm.com/" target="blank">
-          <img src="/images/tools/git.png" alt="Git" />
-        </a>
-
-        <a href="https://www.haskell.org/" target="blank">
-          <img src="/images/tools/haskell.png" alt="Haskell" />
-        </a>
-
-        <a href="http://www.yesodweb.com/" target="blank">
-          <img src="/images/tools/yesod.png" alt="Yesod" />
-        </a>
-
-        <a href="http://www.postgresql.org/" target="blank">
-          <img src="/images/tools/postgresql.png" alt="PostgreSQL" />
-        </a>
-
-        <a href="https://www.djangoproject.com/" target="blank">
-          <img src="/images/tools/django.png" alt="Django" />
-        </a>
-
-        <a href="http://rubyonrails.org/" target="blank">
-          <img src="/images/tools/rubyonrails.png" alt="Ruby on Rails" />
-        </a>
-
-        <a href="https://www.opengl.org/" target="blank">
-          <img src="/images/tools/opengl.png" alt="OpenGL" />
-        </a>
-
-        <a href="https://www.android.com/" target="blank">
-          <img src="/images/tools/android.png" alt="Android" />
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div class="body">
-  <p>
-    All of my personal projects are available on GitHub. Unlike my professional
-    work, which is quite specialised, my personal projects are far more varied
-    and therefore show a lot about my preferences in tools and types of
-    projects, as well as other compentencies which I have developed. In
-    addition, all of this code is Free and Open Source (FOSS) and therefore you
-    can look at it and do almost whatever you want to with it. Have fun!
-  </p>
-</div>
-
-<script id="source-stats-item-template" type="text/underscore">
-  <div class="chart-item">
-    <table>
-      <tbody>
-        <tr>
-          <td><%= language %></td>
-          <td><%= percent %>%</td>
-          <td class="canvas-td">
-            <canvas class="canvas" width="300" height="30"></canvas>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</script>
-
-<div id="source-stats">
-  <div class="container">
-    <div class="chart">
-      <h3>Language Percentage of GitHub Repositories *</h3>
-      <div class="items"></div>
-      <div class="notice">
-        * These statistics include all code written in all non-forked
-        repositories owned by my account, regardless of author. Code I wrote in
-        others' repositories is not included. Code others wrote in my
-        repositories is included
-      </div>
-    </div>
-
-    <table class="loading">
-      <tbody>
-        <tr>
-          <td class="loading-text">
-            This can only be displayed with JavaScript.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<script type="text/javascript">
-// <![CDATA[
-  jQuery(document).ready(function() {
-    var source_stats = new SourceStats(jQuery('#source-stats'),
-      jQuery('#source-stats-item-template'));
-    source_stats.loadData(function() { source_stats.render(); });
-  });
-// ]]>
-</script>
 
 <div id="account-links" class="body">
   <p>
@@ -184,9 +37,11 @@
     <a href="https://linkedin.com/in/meoblast001" target="blank">
       <i class="fa fa-linkedin" aria-hidden="true"></i>
     </a>
-
-    <a href="https://www.flickr.com/photos/73102775@N05" target="blank">
-      <i class="fa fa-flickr" aria-hidden="true"></i>
-    </a>
   </p>
+</div>
+
+<div class="body cv">
+ <h3>CV: </h3>
+ [<a href="docs/cv-en.pdf">Cirriculum Vitae in English</a>]
+ [<a href="docs/cv-de.pdf">Lebenslauf auf Deutsch</a>]
 </div>
