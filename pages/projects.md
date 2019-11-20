@@ -22,12 +22,12 @@ packages are available on [my GitHub profile](https://github.com/meoblast001/).
 
 ### Game Jams
 
-- Busy Beaver (3m5 Game Jam November 2019) - *[Download on GitHub](https://github.com/Rittergit/GameJamMay2019/releases) - [View Source on GitHub](https://github.com/Rittergit/GameJamMay2019)*
+- **Busy Beaver (3m5 Game Jam November 2019)** - *[Download on GitHub](https://github.com/Rittergit/GameJamMay2019/releases) - [View Source on GitHub](https://github.com/Rittergit/GameJamMay2019)*
 
   Busy Beaver is a 2D platformer game made in Godot. My contributions included
   light effects, art, and game logic.
 
-- Island Escape (3m5 Game Jam May 2019) - *[Download on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019/releases) - [View Source on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019)*
+- **Island Escape (3m5 Game Jam May 2019)** - *[Download on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019/releases) - [View Source on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019)*
 
   Island Escape is a 3D network multiplayer game for 2-players made in Unity.
   My contributoins included game logic and network. Afterward I extended to game
