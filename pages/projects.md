@@ -22,6 +22,11 @@ packages are available on [my GitHub profile](https://github.com/meoblast001/).
 
 ### Game Jams
 
+- **Chaos Mech (Global Game Jam 2020)** - *[View Source on GitHub](https://github.com/meoblast001/GlobalGameJam2020Leipzig)*
+
+  Chaos Mech is a 3D VR and gamepad-based cooperative multiplayer game made in
+  Unity. My contributions included game programming for the gamepad non-VR mode.
+
 - **Busy Beaver (3m5 Game Jam November 2019)** - *[Download on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019/releases) - [View Source on GitHub](https://github.com/meoblast001/3m5GameJamNovember2019)*
 
   Busy Beaver is a 2D platformer game made in Godot. My contributions included
