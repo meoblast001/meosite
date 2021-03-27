@@ -3,6 +3,19 @@ software. Here is a list of notable technologies with which I've worked and how,
 when, and if I prefer to use them. I've divided the technologies into
 categories.
 
+## Game Development
+
+- **Unity**: For games and 3D interactive software Unity is the tool I'm most
+familiar with. Its wide feature set, library support, and debugging and
+profiling tools make it a safe choice. I've worked with both the 2D and 3D asset
+pipelines, built UIs, and prototyped levels with ProBuilder. I find that
+libraries like Zenject and UniRX make managing complex projects manageable. I've
+experienced deployment on PC, Android, and iOS platforms.
+
+- **Godot:** Because I prefer free and open source software, I naturally learned
+and used Godot. Currently I am more experienced with Unity but have used Godot
+for 2D game development. Look at my projects page for an example.
+
 ## Web Development
 
 ### Back-End
@@ -57,21 +70,6 @@ tend to use jQuery less frequency.
 generator Hakyll. The frameworks simplifies building static websites and can
 convert various source resources to their publish format.
 
-## Game Development
-
-- **Unity:** If I'm making a game, it's easiest for me to turn to Unity. It's
-the engine with which I have the most experience, it makes prototyping easy, it
-supports almost every feature I need (and the rest is on their roadmap). I've
-worked with the asset pipeline, built UIs, have made both 2D and 3D scenes,
-synchronised multiplayer games using the (now deprecated) high level networking
-API, and have prototyped levels with ProBuilder. Currently I've only worked with
-Unity in a private context. Look at my projects page to see what I've done with
-it.
-
-- **Godot:** Because I prefer free and open source software, I naturally learned
-and used Godot. Currently I am more experienced with Unity but have used Godot
-for 2D game development. Look at my projects page for an example.
-
 ## Desktop Graphical User Interface Development
 
 - **Qt:** When writing a graphical desktop application I prefer using Qt, either
@@ -79,10 +77,3 @@ with Qt Widgets or QML. It's cross-platform, leads to fairly clean C++ code, and
 supports most commonly used graphical control elements. I've used it in both
 private and commercial contexts. In additional to desktop applications I've also
 used it for applications deployed on mobile devices.
-
-## Mobile Development
-
-- **Android:** I've used the Android SDK for developing Thugaim, a game which
-can be found among my projects. My experience has been mostly limited to
-activities, the API for working with rendering to canvases, and input. My
-experience with Android does not extend beyond game development though.
